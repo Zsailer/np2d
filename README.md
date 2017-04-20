@@ -12,7 +12,7 @@ useful too.
 
 Choose random samples from a 2-D array. Get the samples and their indices.
 
-```
+```python
 import numpy as np
 import np2d
 
@@ -23,7 +23,9 @@ samples, indices = np2d.random.choice(a)
 
 ### `np2d.kmin()`
 
-```
+Find the `k` smallest elements in the 2-D array.
+
+```python
 import numpy as np
 import np2d
 
@@ -34,7 +36,7 @@ k_smallest_elements, indices = np2d.kmin(a, 3)
 
 ### `np2d.kmax()`
 
-```
+```python
 import numpy as np
 import np2d
 
@@ -58,3 +60,11 @@ pip install -e .
 
 If there is a NumPy function or module you'd like extended to 2-D, or a new NumPy-like operation
 you'd like me to add to this package, feel free to open an [Issue](https://github.com/Zsailer/np2d/issues/new).
+
+## Tests
+
+To run tests for np2d, run:
+
+```
+nosetests
+```
