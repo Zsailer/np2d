@@ -1,3 +1,5 @@
-# Extra, useful numpy functions
+# Np2d: common 1-D Numpy operations extended to 2-D
 
-This package includes some useful functions I use often when working with Numpy.
+T
+
+#
