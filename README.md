@@ -16,9 +16,15 @@ Choose random samples from a 2-D array. Get the samples and their indices.
 import numpy as np
 import np2d
 
+# Construct a random array
 a = np.random.uniform(size=(4,5))
-weights =
-samples, indices = np2d.random.choice(a)
+
+# Construct weights
+weights = np.random.random(shape=(4,5))
+weights = weights / weights.sum() # normalize
+
+# Sample from a
+samples, indices = np2d.random.choice(a, p=weights)
 ```
 
 ### `np2d.kmin()`
@@ -29,8 +35,12 @@ Find the `k` smallest elements in the 2-D array.
 import numpy as np
 import np2d
 
+# Create a random array
+k = 3
 a = np.random.uniform(size=(4,5))
-k_smallest_elements, indices = np2d.kmin(a, 3)
+
+# Draw the smallest values
+k_smallest_elements, indices = np2d.kmin(a, k)
 ```
 
 
@@ -40,8 +50,12 @@ k_smallest_elements, indices = np2d.kmin(a, 3)
 import numpy as np
 import np2d
 
+# Create a random array
+k = 3
 a = np.random.uniform(size=(4,5))
-k_largest_elements, indices = np2d.kmax(a, 3)
+
+# Draw the largest values
+k_largest_elements, indices = np2d.kmin(a, k)
 ```
 
 ## Installation
