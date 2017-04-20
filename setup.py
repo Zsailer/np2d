@@ -6,16 +6,19 @@ except:
 
 # define all packages for distribution
 packages = [
-    'npfuncs',
+    'np2d',
+    'np2d.tests'
 ]
 
-setup(name='npfuncs',
+setup(name='np2d',
       version='0.1',
-      description='',
+      description='Common 2-D NumPy operations.',
       author='Zach Sailer',
       author_email='zachsailer@gmail.com',
-      url='https://github.com/Zsailer/npfuncs',
+      url='https://github.com/Zsailer/np2d',
+      license="MIT",
       packages=packages,
+      keywords=["numpy", "2d", "arrays"],
       classifiers=[
         'Development Status :: 3 - Alpha',
         'Programming Language :: Python :: 3',
