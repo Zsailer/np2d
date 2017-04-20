@@ -1,61 +1,14 @@
-import numpy as np
+import numpy as _np
+from functools import wraps
 
-def kmax2d(arr, k):
-    """Return the (row, col) indices of the n largest arguments in the 2d array.
+class Np2dException(Exception):
+    """"""
 
-    Parameters
-    ----------
-    arr : array
-        2d numpy array
-    k : int
-        number of arguments to select.
-
-    Returns
-    -------
-    row : array
-        indices
-    col : array
-    """
-    n, m = arr.shape
-    vec = arr.flatten()
-    vec_ = vec.argsort()[::-1]
-    top_vec = vec_[:k]
-    row = top_vec // n
-    col = top_vec % n
-    return row, col
-
-def kmin2d(arr, k):
-    """Return the (row, col) indices of the n largest arguments in the 2d array.
-
-    Parameters
-    ----------
-    arr : array
-        2d numpy array
-    k : int
-        number of arguments to select.
-
-    Returns
-    -------
-    row : array
-        indices
-    col : array
-    """
-    n, m = arr.shape
-    vec = arr.flatten()
-    vec_ = vec.argsort()
-    top_vec = vec_[:k]
-    row = top_vec // n
-    col = top_vec % n
-    return row, col
-
-
-def choice2d(a, size=None, replace=True, p=None):
-    """Choose values
-
-    Returns
-    -------
-    samples : 1-D array
-        The generated random samples
-    indices :
-        
-    """
+def check_2d(f):
+    """Check that the decorated method takes a 2d array"""
+    @wraps(f)
+    def inner(a, *args, **kwargs):
+        if a.ndim != 2:
+            raise Np2dException("`a` must be a NumPy array with dim=2")
+        return f(a, *args, **kwargs)
+    return inner
