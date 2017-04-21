@@ -36,10 +36,10 @@ import numpy as np
 import np2d
 
 # Create a random array
-k = 3
 a = np.random.uniform(size=(4,5))
 
-# Draw the smallest values
+# Draw the k smallest values
+k = 3
 k_smallest_elements, indices = np2d.kmin(a, k)
 ```
 
@@ -51,11 +51,11 @@ import numpy as np
 import np2d
 
 # Create a random array
-k = 3
 a = np.random.uniform(size=(4,5))
 
-# Draw the largest values
-k_largest_elements, indices = np2d.kmin(a, k)
+# Draw the k largest values
+k = 3
+k_largest_elements, indices = np2d.kmax(a, k)
 ```
 
 ## Installation
