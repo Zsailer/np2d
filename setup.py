@@ -11,7 +11,7 @@ packages = [
 ]
 
 setup(name='np2d',
-      version='0.1',
+      version='0.1.1',
       description='Common 2-D NumPy operations.',
       author='Zach Sailer',
       author_email='zachsailer@gmail.com',

@@ -2,7 +2,7 @@ from .base import *
 import numpy as _np
 
 @check_2d
-def choice2d(a, size=None, replace=True, p=None):
+def choice(a, size=None, replace=True, p=None):
     """Choose random samples from a 2-D array.
 
     Parameters
