@@ -1,8 +1,8 @@
 # Np2d: 2-D NumPy operations
 
-I find that 2-D arrays are pretty common in scientific computing, and there are a few
-operations I find myself repeatedly writing for 2-D array. While simple, these operations
-are too specific for the general NumPy scope (and thus, do not warrant a pull request).
+2-D arrays are a common data-structure in scientific computing, and there are a few
+2-D operations I find myself repeatedly writing in my research. While simple, these operations
+are too specific for the general NumPy scope (and thus, do not warrant a pull request to NumPy).
 So, I'm collecting a set of fast, 2-D NumPy operations here. Maybe you'll find them
 useful too.
 
