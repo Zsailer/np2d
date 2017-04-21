@@ -22,15 +22,15 @@ def choice2d(a, size=None, replace=True, p=None):
         The generated random samples
     indices :
     """
-    arr = _np.ravel(a.shape)
+    arr = _np.ravel(a)
     if p is not None:
-        parr = _np.ravel(p.shape)
+        parr = _np.ravel(p)
     else:
         parr = None
     # Build an index array
-    index_arr = np.arange(len(arr))
+    index_arr = _np.arange(len(arr))
     # Sample from indices array
-    sample_indices = _np.random.choice(index_arr, size=size, replace=replace, p=p)
+    sample_indices = _np.random.choice(index_arr, size=size, replace=replace, p=parr)
     # Put the indices back in original
     row, col = _np.unravel_index(sample_indices, dims=a.shape)
     samples = arr[sample_indices]
